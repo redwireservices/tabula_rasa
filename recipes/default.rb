@@ -38,6 +38,8 @@ end
 # Assumption: The most recent JSON file is the one for the current OpsWorks agent invocation.
 latest_json_file = ::Dir.glob('/var/lib/aws/opsworks/chef/*').sort.keep_if { |i| i.end_with?('.json') }.last
 
+Chef::Log.level = :debug
+
 # Run the chef client
 ruby_block 'run Tabula-Rasa chef-client' do
   block do
