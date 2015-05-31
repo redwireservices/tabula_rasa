@@ -7,7 +7,7 @@ cookbook_path ["<%= @cookbook_path %>"]
 file_cache_path "<%= @cache_path %>"
 node_path "/var/lib/aws/opsworks/data/nodes"
 data_bag_path "/var/lib/aws/opsworks/data/data_bags"
-log_level :info
+log_level :debug
 
 %w{BUNDLE_GEMFILE GEM_HOME GEM_PATH RUBYLIB RUBYOPT}.each do |env|
   ENV[env] = nil
