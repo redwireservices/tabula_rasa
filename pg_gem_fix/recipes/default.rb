@@ -8,4 +8,10 @@
 #
 chef_gem "pg" do
   action :install
+  version "0.18.2"
+end
+
+gem_package "pg" do
+  action :install
+  version "0.18.2"
 end
